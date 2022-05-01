@@ -11680,6 +11680,7 @@ header.masthead .masthead-heading {
     text-align: left;
   }
 }
+
 @media (min-width: 992px) {
   .timeline > li {
     min-height: 150px;
@@ -11814,4 +11815,14 @@ section#contact form#contactForm :-ms-input-placeholder {
 
 .my-float{
 	margin-top:16px;
+}
+
+.confirmation-gif {
+  width: 500px;
+}
+
+@media (max-width: 768px) {
+  .confirmation-gif {
+    width: 200px;
+  }
 }
