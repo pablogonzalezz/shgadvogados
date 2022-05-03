@@ -11826,3 +11826,12 @@ section#contact form#contactForm :-ms-input-placeholder {
     width: 200px;
   }
 }
+
+.about-item {
+  transition: 0.5s ease;
+}
+
+.about-item:hover {
+  transform: scale(1.1);
+  /* background-color: rgba(0, 0, 0, 0.1); */
+}
