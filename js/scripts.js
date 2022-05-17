@@ -1,11 +1,42 @@
 /*!
-* Start Bootstrap - Agency v7.0.11 (https://startbootstrap.com/theme/agency)
-* Copyright 2013-2022 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-agency/blob/master/LICENSE)
+* Developed by Pablo Gonzalez
+* Licensed under MIT (https://github.com/pablogonzalezz/shgadvogados)
 */
-//
-// Scripts
-// 
+
+// -------------- Google Analytics Scripts --------------
+const scriptDiv = document.createElement('script');
+scriptDiv.src = "https://www.googletagmanager.com/gtag/js?id=AW-10896769743";
+document.head.appendChild(scriptDiv);
+
+window.dataLayer = window.dataLayer || []; 
+
+function gtag() { 
+    dataLayer.push(arguments); 
+} 
+
+gtag('js', new Date()); 
+gtag('config', 'AW-10896769743'); 
+
+function gtag_report_conversion(event, url) { 
+    var callback = () => { 
+        if(event.target.parentElement.classList.contains('question-text')) {
+            return;
+        }
+        if(event.target.getAttribute('target') === '_blank') {
+            window.open(url, '_blank');
+            return;
+        }
+        if (typeof (url) != 'undefined') { 
+            window.location = url; 
+            return;
+        } 
+    }; 
+
+    gtag('event', 'conversion', { 'send_to': 'AW-10896769743/4VFmCIn707oDEM-F_sso', 'event_callback': callback }); 
+    return false; 
+}
+
+// -------------- Page scripts --------------
 
 window.addEventListener('DOMContentLoaded', event => {
 
