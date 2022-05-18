@@ -18,10 +18,18 @@ gtag('js', new Date());
 gtag('config', 'AW-10896769743'); 
 
 function gtag_report_conversion(event, url) { 
+    var tag;
+
+    // 	[Botão Whatsapp] Tag
+    if(event.target.classList.contains('float')) {
+        tag = 'AW-10896769743/UdFsCOHDoboDEM-F_sso';
+    }
+
     var callback = () => { 
         if(event.target.parentElement.classList.contains('question-text')) {
             return;
         }
+
         if(event.target.getAttribute('target') === '_blank') {
             window.open(url, '_blank');
             return;
@@ -32,7 +40,7 @@ function gtag_report_conversion(event, url) {
         } 
     }; 
 
-    gtag('event', 'conversion', { 'send_to': 'AW-10896769743/4VFmCIn707oDEM-F_sso', 'event_callback': callback }); 
+    gtag('event', 'conversion', { 'send_to': tag, 'event_callback': callback }); 
     return false; 
 }
 
