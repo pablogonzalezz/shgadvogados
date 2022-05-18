@@ -35,6 +35,11 @@ function gtag_report_conversion(event, url) {
         tag = 'AW-10896769743/4VFmCIn707oDEM-F_sso';
     }
 
+    //  [Botão Whatsapp "Fale Conosco"] Tag
+    if(event.target.classList.contains('fale-conosco')) {
+        tag = 'AW-10896769743/8dpNCL7k2b4DEM-F_sso';
+    }
+
     var callback = () => { 
         if(event.target.parentElement.classList.contains('question-text')) {
             return;
