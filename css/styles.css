@@ -11815,6 +11815,7 @@ section#contact form#contactForm :-ms-input-placeholder {
 
 .my-float{
 	margin-top:16px;
+  pointer-events: none;
 }
 
 .confirmation-gif {

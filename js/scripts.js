@@ -20,11 +20,15 @@ gtag('config', 'AW-10896769743');
 function gtag_report_conversion(event, url) { 
     var tag;
 
-    // 	[Botão Whatsapp] Tag
+    // 	[Botão Whatsapp Flutuante] Tag
     if(event.target.classList.contains('float')) {
         tag = 'AW-10896769743/UdFsCOHDoboDEM-F_sso';
     }
-    console.log(tag)
+
+    //  [Botão Whatsapp "Fale Com um Especialista"] Tag
+    if(event.target.id == "fale_especialista_btn") {
+        tag = 'AW-10896769743/HPIOCIyT1LoDEM-F_sso';
+    }
 
     var callback = () => { 
         if(event.target.parentElement.classList.contains('question-text')) {
