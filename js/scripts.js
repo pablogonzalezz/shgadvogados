@@ -30,6 +30,11 @@ function gtag_report_conversion(event, url) {
         tag = 'AW-10896769743/HPIOCIyT1LoDEM-F_sso';
     }
 
+    //  [Formulário do site] Tag
+    if(event.type == 'submit') {
+        tag = 'AW-10896769743/4VFmCIn707oDEM-F_sso';
+    }
+
     var callback = () => { 
         if(event.target.parentElement.classList.contains('question-text')) {
             return;
