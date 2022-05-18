@@ -24,6 +24,7 @@ function gtag_report_conversion(event, url) {
     if(event.target.classList.contains('float')) {
         tag = 'AW-10896769743/UdFsCOHDoboDEM-F_sso';
     }
+    console.log(tag)
 
     var callback = () => { 
         if(event.target.parentElement.classList.contains('question-text')) {
